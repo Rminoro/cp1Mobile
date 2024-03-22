@@ -1,13 +1,6 @@
-// import React from 'react';
-// import MainScreen from './screen/MainScreen';
-
-// export default function App() {
-//   return <MainScreen />;
-// }
 import React, { useState } from 'react';
-import { View, Button, TextInput } from 'react-native';
-import MainScreen from './screen/MainScreen';
-import ModalComponent from './components/ModalComponent';
+import { View, Button, TextInput, Text, MainScreen} from 'react-native';
+
 
 export default function App() {
   const [nome, setNome] = useState('');
@@ -26,35 +19,42 @@ export default function App() {
   }
 
   return (
-    <View>
-      
+    <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text style={{fontWeight: 'bold'}}> Informe seu nome: </Text>
       <TextInput
-        placeholder="Nome"
-        onChangeText={(text) => setNome(text)}
+        style={{borderWidth: 1, borderColor: 'blue', width: 200, marginBottom: 10}}
+        keyboardType="default"
         value={nome}
-      />
-      <TextInput
-        placeholder="CPF"
-        onChangeText={(text) => setCpf(text)}
+        onChangeText={text => setNome(text)}
+       />
+      <Text style={{fontWeight: 'bold'}}> Informe seu CPF: </Text>
+      <TextInput 
+        style={{borderWidth: 1, borderColor: 'blue', width: 200, marginBottom: 10}}
+        keyboardType="default"
         value={cpf}
+        onChangeText={text => setCpf(text)}
       />
-      <TextInput
-        placeholder="E-mail"
-        onChangeText={(text) => setEmail(text)}
+      <Text style={{fontWeight: 'bold'}}> Informe seu E-mail: </Text>
+      <TextInput 
+        style={{borderWidth: 1, borderColor: 'blue', width: 200, marginBottom: 10}}
+        keyboardType="default"
         value={email}
+        onChangeText={text => setEmail(text)}
       />
-      <TextInput
-        placeholder="Telefone"
-        onChangeText={(text) => setTelefone(text)}
+      <Text style={{fontWeight: 'bold'}}> Informe seu telefone: </Text>
+      <TextInput 
+        style={{borderWidth: 1, borderColor: 'blue', width: 200, marginBottom: 10}}
+        keyboardType="default"
         value={telefone}
+        onChangeText={text => setTelefone(text)}
       />
-      <TextInput
-        placeholder="Data de Nascimento"
-        onChangeText={(text) => setDataNascimento(text)}
+      <Text style={{fontWeight: 'bold'}}>Informe sua data de nascimento:</Text>
+      <TextInput 
+        style={{borderWidth: 1, borderColor: 'blue', width: 200, marginBottom: 10}}
+        keyboardType="default"
         value={dataNascimento}
+        onChangeText={text => setDataNascimento(text)}
       />
-
-     
       <Button title="Enviar" onPress={handleSubmit} />
     </View>
   );
