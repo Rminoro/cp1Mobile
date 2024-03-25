@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { View, Button, TextInput, Text, MainScreen} from 'react-native';
+import { View, Button, TextInput, Text,} from 'react-native';
+import MainScreen from './screen/MainScreen';
+import ModalComponent from './components/ModalComponent';
 
 
 export default function App() {
